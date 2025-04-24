@@ -32,7 +32,7 @@
         },
         {
           "key": "Access-Control-Allow-Origin",
-          "value": "https://pokedex-a-orcin.vercel.app/"
+          "value": "https://pokedex-a-orcin.vercel.app"
         }
       ]
     }
