@@ -1,17 +1,11 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "use": "@vercel/static"
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; img-src 'self' https://pokedex-a-flax.vercel.app; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://pokedex-a-flax.vercel.app; style-src 'self' 'unsafe-inline' https://pokedex-a-flax.vercel.app; font-src 'self' data:;"
+          "value": "default-src * 'self' 'unsafe-inline' 'unsafe-eval'; img-src * 'self' data:; script-src * 'self' 'unsafe-inline' 'unsafe-eval'; style-src * 'self' 'unsafe-inline';"
         },
         {
           "key": "X-Frame-Options",
