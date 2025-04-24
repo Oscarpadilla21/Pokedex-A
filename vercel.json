@@ -10,7 +10,7 @@
         "headers": [
           {
             "key": "Content-Security-Policy",
-            "value": "default-src 'self'; img-src 'self' https://pokedex1-gamma.vercel.app; script-src 'self' https://pokedex1-gamma.vercel.app; style-src 'self' https://pokedex1-gamma.vercel.app;"
+            "value": "default-src 'self'; img-src 'self' https://pokedex-a-alpha.vercel.app/; script-src 'self' https://pokedex-a-alpha.vercel.app/; style-src 'self' https://pokedex-a-alpha.vercel.app/"
           },
           {
             "key": "X-Frame-Options",
@@ -30,7 +30,7 @@
           },
           {
             "key": "Access-Control-Allow-Origin",
-            "value": "https://pokedex1-gamma.vercel.app"
+            "value": "https://pokedex-a-alpha.vercel.app/"
           }
         ]
       }
