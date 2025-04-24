@@ -3,7 +3,24 @@
   "builds": [
     {
       "src": "package.json",
-      "use": "@vercel/node"
+      "use": "@vercel/static-build",
+      "config": {
+        "outputDirectory": "."
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(assets|images)/(.*)",
+      "dest": "/$1/$2"
+    },
+    {
+      "src": "/(.*).(js|css|ico|jpg|jpeg|png|svg|webp)",
+      "dest": "/$1.$2"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ],
   "headers": [
@@ -12,7 +29,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; img-src 'self' https://pokedex-a-alpha.vercel.app/; script-src 'self' https://pokedex-a-alpha.vercel.app/; style-src 'self' https://pokedex-a-alpha.vercel.app/"
+          "value": "default-src 'self'; img-src 'self' https://pokedex-a-alpha.vercel.app/; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://pokedex-a-alpha.vercel.app/; style-src 'self' 'unsafe-inline' https://pokedex-a-alpha.vercel.app/; font-src 'self' data:;"
         },
         {
           "key": "X-Frame-Options",
