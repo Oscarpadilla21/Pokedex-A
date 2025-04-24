@@ -1,7 +1,8 @@
 {
   "builds": [
     {
-      "src": "package.json"
+      "src": "package.json",
+      "use": "@vercel/node"
     }
   ],
   "headers": [
@@ -43,4 +44,3 @@
     }
   ]
 }
-
