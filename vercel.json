@@ -1,5 +1,5 @@
 {
-  "headers": [
+  "builds": [
     {
       "src":"package.json",
       "headers": [
