@@ -5,7 +5,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' https://pokeapi.co; style-src 'self' https://fonts.googleapis.com; img-src 'self' https://pokeapi.co data:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://pokeapi.co; object-src 'none'; base-uri 'self'; frame-ancestors 'none';"
+          "value": "default-src 'self';"
         },
         {
           "key": "X-Frame-Options",
