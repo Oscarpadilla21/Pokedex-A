@@ -5,11 +5,11 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self' 'unsafe-inline' 'unsafe-eval'; img-src * 'self' data:; script-src * 'self' 'unsafe-inline' 'unsafe-eval'; style-src * 'self' 'unsafe-inline';"
+          "value": "default-src 'self'; script-src 'self' https://pokeapi.co; style-src 'self' https://fonts.googleapis.com; img-src 'self' https://pokeapi.co data:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://pokeapi.co; object-src 'none'; base-uri 'self'; frame-ancestors 'none';"
         },
         {
           "key": "X-Frame-Options",
-          "value": "SAMEORIGIN"
+          "value": "DENY"
         },
         {
           "key": "X-Content-Type-Options",
@@ -17,17 +17,27 @@
         },
         {
           "key": "Referrer-Policy",
-          "value": "no-referrer-when-downgrade"
+          "value": "strict-origin-when-cross-origin"
         },
         {
           "key": "Permissions-Policy",
           "value": "geolocation=(), microphone=(), camera=()"
         },
         {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains; preload"
+        },
+        {
           "key": "Access-Control-Allow-Origin",
           "value": "https://pokedex-a-six.vercel.app"
         }
       ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
