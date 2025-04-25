@@ -26,7 +26,7 @@
         },
         {
           "key": "Access-Control-Allow-Origin",
-          "value": "https://pokedex-a-alpha.vercel.app/"
+          "value": "https://pokedex-a-alpha.vercel.app"
         }
       ]
     }
